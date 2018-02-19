@@ -1,6 +1,27 @@
 sudo: false
 language: node_js
 node_js: "stable"
-
-after_success:
-  - yarn danger ci
+jobs:
+  allow_failures:
+    - env: TEST=3
+  include:
+    - stage: unit
+      env: TEST=1
+      script: skip
+    - stage: unit
+      env: TEST=2
+      script: skip
+    - stage: integration
+      env: TEST=2
+      script: skip
+    - stage: integration
+      env: TEST=3
+      script: exit 1
+    - stage: integration
+      env: TEST=4
+      script: skip
+    - stage: integration
+      env: TEST=5
+      script: skip
+    - stage: final
+      script: yarn danger ci

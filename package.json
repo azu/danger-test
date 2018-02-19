@@ -22,9 +22,11 @@
     "type": "git",
     "url": "https://github.com/azu/danger-test.git"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "devDependencies": {
     "danger": "^3.1.7"
+  },
+  "dependencies": {
+    "node-fetch": "^2.0.0"
   }
 }
