@@ -11,11 +11,4 @@ fetchFailureJobs(TRAVIS_BUILD_ID, TRAVIS_TOKEN).then(jobList => {
         message("Success All!");
     }
 });
-// Add a message to the table
 message("You have added 2 more modules to the app")
-
-//  Adds a warning to the table
-warn("You have not included a CHANGELOG entry.")
-
-// Declares a blocking 
-fail(`It failed with fails.`)
