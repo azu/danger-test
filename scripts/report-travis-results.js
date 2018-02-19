@@ -27,5 +27,6 @@ async function main(TRAVIS_BUILD_ID, TRAVIS_TOKEN) {
     const failureJobList = jobResults.filter(job => {
         return job.state === "failed";
     });
+    return failureJobList;
 }
 module.exports = main;
